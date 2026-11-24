@@ -57,7 +57,7 @@ def test_required_assets():
     assets = [
         "css/style1.css",
         "javascript/scripts.js",
-        "resume/Dylan's Resume.pdf",
+        "resume/Dylan_Resume.pdf",
     ]
 
     for asset in assets:
@@ -83,8 +83,9 @@ def test_navigation():
         html = read_file(page)
 
         links = re.findall(
-            r'href="([^"]+)"',
+            r'href\s*=\s*["\']([^"\']+)["\']',
             html,
+            flags=re.IGNORECASE,
         )
 
         for link in links:
@@ -115,8 +116,9 @@ def test_css_links():
         )
 
         css_links = re.findall(
-            r'<link[^>]*href="([^"]+)"',
+            r'<link[^>]*href\s*=\s*["\']([^"\']+)["\']',
             html,
+            flags=re.IGNORECASE,
         )
 
         for css in css_links:
@@ -140,8 +142,9 @@ def test_javascript_links():
         )
 
         scripts = re.findall(
-            r'<script[^>]*src="([^"]+)"',
+            r'<script[^>]*src\s*=\s*["\']([^"\']+)["\']',
             html,
+            flags=re.IGNORECASE,
         )
 
         for script in scripts:
@@ -165,8 +168,9 @@ def test_image_assets():
         )
 
         images = re.findall(
-            r'<img[^>]*src="([^"]+)"',
+            r'<img[^>]*src\s*=\s*["\']([^"\']+)["\']',
             html,
+            flags=re.IGNORECASE,
         )
 
         for image in images:
@@ -215,8 +219,9 @@ def test_image_alt_text():
 
             require(
                 re.search(
-                    r'alt="[^"]+"',
+                    r'alt\s*=\s*["\'][^"\']+["\']',
                     img,
+                    flags=re.IGNORECASE,
                 ) is not None,
                 f"{page.name} image contains alt text",
             )
