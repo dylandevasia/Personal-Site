@@ -1,2 +1,2 @@
-# project1-dylandevasia
-Dylan's Repository for Project 1: Personal Website
+# Personal Website
+Dylan's Repository for his Personal Website!
