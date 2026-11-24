@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name = "viewport"
+		content = "width=device-width, initial-scale = 1.0">
+        <title>Dylan Devasia</title>
+		<link id = "themeStylesheet" rel="stylesheet" type="text/css" href="css/style1.css">
+	</head>
+	<body>
+		<div id="theme-toggle-root"></div>
+		
+		<script src="javascript/scripts.js" defer></script>
+		<nav>
+			<a href="index.html">Dylan</a>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="portfolio.html">Portfolio</a></li>
+				<li><a href="qualifications.html">Qualifications</a></li>
+				<li><a href="service.html">Service</a></li>
+				<li><a href="genai.html">GenAI</a></li>
+			</ul>
+			
+		</nav>
+
+		<section class = "portfolio-layout">
+			<div class="white-box-portfolio">
+				<a href="https://www.linkedin.com/in/dylan-devasia-715698292/">
+				<img src = "images/linkedin.png" alt = "LinkedinLogo" class = mini-img></a>
+				<p> This is my 
+					<a href="https://www.linkedin.com/in/dylan-devasia-715698292/">LinkedIn</a>.
+					It has my work experience, skills, and my connections! Currently, I am working
+					as a Research Assistant under Chen Chen, where I am learning about industry 
+					standard hardware fuzzing and hardware security/verification. Also, I am developing
+					Machine Learning Algorithm + Model + Loss function for a startup known as ArchivePicks
+					as a Software Engineer. Please use this to make any business inquiries!</p>
+			</div>
+			
+			<div class="white-box-portfolio">
+				<a href="https://www.se.com/us/en/about-us/company-mission/">
+				<img src = "images/Schneider.jpg" alt = "SchneiderLogo" class = mini-img></a>
+				<p> This is 
+					<a href="https://www.se.com/us/en/about-us/company-mission/">Schneider Electric</a>,
+					 the company I interned for last summer. I gained experience through them by 
+					programming HMI's and PLC's. Specifically, I wrote PLC code that would derive an 
+					indicator for a battery's voltage status, developed an energy tracking system using 
+					persistent memory, and additionally use C# to display this information cleanly. 
+					On the HMI side of things,I developed an HMI interface for a charging station 
+					that displays relevant information about power flow and more that are important
+					for debugging the current system.
+				</p>
+			</div>
+			
+			<div class="white-box-portfolio">
+				<a href="https://github.com/dylandevasia">
+				<img src = "images/github.png" alt = "GithubLogo" class = mini-img></a>
+				<p> This is my 
+					<a href="https://github.com/dylandevasia">Github</a>.
+					It has some of my personal and school projects I've enjoyed working on! A short list of these
+					projects include: Mario and Galaga Imitation Games, Machine Learning with Adaline's on the Iris 
+					dataset, This Website, and an ARMv8 Instruction Processor. Feel free to help me add on to it! 
+					Contact me through LinkedIn to discuss any potential project collaborations.
+
+				</p>
+			</div>
+			
+			<div class="white-box-portfolio">
+				<a href="resume/Dylan's Resume 1_3_26.pdf">
+				<img src = "images/resume.jpg" alt = "ResumeLogo" class = mini-img></a>
+				<p> This is my 
+					<a href="resume/Dylan's Resume.pdf">Resume</a>. 
+					It contains a brief version of my projects, work and academic experince,
+					as well as some skills and awards! Scroll through it at your own leisure.
+				</p>
+				<br>
+				<button onclick = "elementSwapIn('resume', 'button2', 'button1')" id = 'button1'>
+					Click here to reveal resume on-site!
+				</button>
+				<button onclick = "elementSwapOut('button1', 'button2', 'resume')" id = 'button2' style="display:none;">
+					Click here to hide resume on-site!
+				</button>
+				
+			</div>
+			<embed src = "resume/Dylan's Resume.pdf" height = '600px' width = '1240px' id = "resume" style="display:none;"/>
+		</section>
+		
+	</body>
+</html>
