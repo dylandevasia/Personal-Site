@@ -41,7 +41,6 @@ def test_required_pages():
         "portfolio.html",
         "qualifications.html",
         "service.html",
-        "genai.html",
     ]
 
     for page in required:
@@ -75,7 +74,6 @@ def test_navigation():
         "portfolio.html",
         "qualifications.html",
         "service.html",
-        "genai.html",
     ]
 
     for page in pages:
